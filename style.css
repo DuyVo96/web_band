@@ -1,0 +1,120 @@
+/* reset css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 
+1. Vị trí
+2. Kích thước (width, height)
+3. Màu sắc
+4. Kiểu dáng
+ */
+ /* 
+ 1. Từ ngoài vào trong
+ 2. Từ trên xuống dưới
+ 4. Từ tổng quan đến chi tiết
+ */
+ html {
+     font-family:   Arial, Helvetica, sans-serif ;
+     /* font arial và Hel xét cái nào có thì chạy, cái cuối là chủng phông nếu không có thì chọn theo chủng */
+ }
+#main{
+
+    
+}
+#header{
+    height: 46px;
+    background-color: #000;
+}
+#nav {
+    display: inline-block;
+    /* cho thẻ nav ngắn đúng tới ô menu thôi không dùng hơn */
+}
+/* #nav li để dẫn đúng đến thẻ li trong id nav và display: inline block để cho nó cùng hàng, giữ nguyên khối kích thước */
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {   
+    position: relative;
+}
+
+#nav > li > a {
+    color: #fff;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block;
+    /* thẻ a đang là inline thì không có kích thước chỉ là auto không tự động kế thừa chiều rộng thẻ chứa nos, nên cho thuộc tính block */
+}
+
+#nav > li:hover > .subnav {
+    display: block;
+}
+
+#nav > li:hover > a, #nav .subnav li:hover a {
+    /* cho thuộc tính vào thẻ li trong nav, lúc này a là con của li nên có bị hover */
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav a {
+    color: #333;
+    display: block;
+    padding: 0px 12px;
+    line-height: 38px;
+}
+/* texttransform: chữ thường thành chữ hoa*/
+#nav, .subnav {
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    list-style-type: none;    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .nav-arrow-down {
+    font-size: 12px;
+}
+
+#header .search-btn {
+    float: right;
+    padding: 0px 21px;
+    cursor: pointer;
+    /* thẻ div này đang có thuộc tính kế thừa hết chiều ngang có thể chiếm
+    xài float mất thuộc tính kế thừa chiều ngang */
+}
+
+#header .search-btn:hover {
+    background-color: #F44336;
+}
+
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#nav .subnav {
+    display: none;
+    /* none là ẩn đi */
+    position: absolute;
+    background-color: #fff;
+}
+
+#slider{
+
+}
+#content{
+
+    
+}
+#footer{
+
+    
+}
